@@ -41,7 +41,7 @@ function gameInit() {
         const h2 = document.createElement("h2");
         h2.setAttribute("data-index", i);
         h2.setAttribute("data-letter", myWord[i]);
-        h2.setAttribute("id", "letter")
+        h2.setAttribute("id", "letter");
         h2.style.borderBottom = "thick solid #000000";
         // appends the h2 element in container
         container.appendChild(h2);
@@ -78,6 +78,8 @@ function timer() {
             }
             // Change instructions to winning congrats
             instructions.textContent = "YOU'VE WON!!!";
+            // Generate new word
+            fetchWord();
         }
 
         // Losing Case
